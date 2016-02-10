@@ -212,7 +212,7 @@ lr.on('end', function () {
 
 	console.log(firstpossibility);
 	console.log(start);
-	
+
 	// initialize start to be an array of 0s the length of possibilities
 	// start = new Array(newpossibilities.length).fill(0);
 
@@ -223,7 +223,9 @@ lr.on('end', function () {
 
 	// console.log(end);
 
-	// generate all possibilities
+	// PLAN HERE
+
+	// generate all possibilities 
 
 	do {
 		// console.log('sanity');
