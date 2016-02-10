@@ -154,20 +154,11 @@ lr.on('end', function () {
 	for (var i = firstcodemsg.length - 1; i >= 0 ; i--) {
 		if (firstcodemsg[i] == '_') { /* do nothing */ } 
 		else {
-			// console.log("\nsearchindex: " + searchindex + "\n" + 
-			// 	"code back to front: " + firstcodemsg[i] + "\n" + 
-			// 	"i: " + i + "\n" );
-			// 	// "firstcodemsg.length - 1 - i: " + (firstcodemsg.length - 1 - i).toString());
-			// console.log("found location:                    " + _.lastIndexOf(originalmsg, firstcodemsg[i], searchindex));
 			lastpossibility.push(_.lastIndexOf(originalmsg, firstcodemsg[i], searchindex));
-			// lastpossibility[firstcodemsg.length - 1 - i] = _.lastIndexOf(originalmsg, firstcodemsg[i], searchindex);
 			searchindex = _.lastIndexOf(originalmsg, firstcodemsg[i], searchindex) - 1;
 		}
 	}
 	lastpossibility = lastpossibility.reverse();
-
-	// console.log(firstpossibility.length);
-	// console.log(firstcodemsg.length);
 
 	// check length of firstpossibility against firstcodemsg
 	if (firstpossibility.length != firstcodemsg.length) {
@@ -186,11 +177,6 @@ lr.on('end', function () {
 		start = firstpossibility[i];
 		end = lastpossibility[i];
 		for (; start <= end; start++ ) {
-			// console.log("\n" + 
-			// 	"start: " + start + "\n" +
-			// 	"end:   " + end + "\n" +
-			// 	"originalmsg[start]: " + originalmsg[start] + "\n" +
-			// 	"shortfirstcode[i]: " + shortfirstcode[i]);
 			if (originalmsg[start] == shortfirstcode[i]) {
 				temp.push(start);
 				// console.log("PUSHED!");
@@ -226,6 +212,7 @@ lr.on('end', function () {
 
 	console.log(firstpossibility);
 	console.log(start);
+	
 	// initialize start to be an array of 0s the length of possibilities
 	// start = new Array(newpossibilities.length).fill(0);
 
@@ -239,7 +226,7 @@ lr.on('end', function () {
 	// generate all possibilities
 
 	do {
-		console.log('sanity');
+		// console.log('sanity');
 	} while(false);
 
 
@@ -272,14 +259,6 @@ lr.on('end', function () {
 	/////////////////////////////////////////////////////////////
 
 	divisors = calculatedivisors(possibilities);
-
-
-	// build answer array one permutation at a time
-	// for (var i = 0; i < total; i++ ) {
-	// 	// 
-
-
-	// }
 
 
 	//	traverse the array using every combination to calculate (allpossibilities)
