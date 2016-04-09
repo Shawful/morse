@@ -515,6 +515,7 @@ String.prototype.removeit=function(index) {
 	// console.log(firstpossibility);
 	// console.log(start);
 
+
 	// initialize start to be an array of 0s the length of possibilities
 	// start = new Array(newpossibilities.length).fill(0);
 
@@ -525,6 +526,7 @@ String.prototype.removeit=function(index) {
 
 
 	// generate all possibilities
+
 	// while (!_.isEqual(start, end)) {
 		// start = getnext(possibilities, firstpossibility, lastpossibility);
 		// for (i = 0; i < possibilities.length; i++) {
@@ -549,14 +551,6 @@ String.prototype.removeit=function(index) {
 	/////////////////////////////////////////////////////////////
 
 	// divisors = calculatedivisors(possibilities);
-
-
-	// build answer array one permutation at a time
-	// for (var i = 0; i < total; i++ ) {
-	// 	// 
-
-
-	// }
 
 
 	//	traverse the array using every combination to calculate (allpossibilities)
